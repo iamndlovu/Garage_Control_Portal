@@ -1,0 +1,18 @@
+@import './variables.scss';
+
+.button {
+  background-color: $primary-background;
+  color: $primary-text;
+  font-size: 1rem;
+  height: 2rem;
+  border-radius: 6px;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: $link-color;
+    border-color: $link-color;
+  }
+}

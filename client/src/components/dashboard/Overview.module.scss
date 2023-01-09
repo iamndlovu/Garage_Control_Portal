@@ -1,0 +1,32 @@
+@import '../../variables.scss';
+@import '../../button.module.scss';
+
+.Overview {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    tr {
+      text-transform: capitalize;
+
+      &:nth-child(even) {
+        background-color: lighten($color: $link-color, $amount: 25);
+      }
+
+      td {
+        border: 1px solid #888;
+        border-collapse: collapse;
+        padding: 9px 2px;
+
+        &:last-child {
+          border-right: none;
+          padding-left: 7px;
+        }
+
+        &:first-child {
+          border-left: none;
+        }
+      }
+    }
+  }
+}

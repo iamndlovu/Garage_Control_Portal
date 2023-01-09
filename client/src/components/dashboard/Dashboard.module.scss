@@ -1,0 +1,53 @@
+@import '../../variables.scss';
+
+.Dashboard {
+  padding: $side-padding;
+  flex: 1;
+  display: grid;
+  gap: 16px;
+  grid-template-areas:
+    'welcome welcome'
+    'overview history'
+    'logs logs';
+
+  .welcome {
+    grid-area: welcome;
+  }
+
+  .overview {
+    grid-area: overview;
+    padding: $side-padding;
+    border-radius: 16px;
+    background-color: rgba($color: #61dafb, $alpha: 0.3);
+  }
+
+  .history {
+    grid-area: history;
+    display: flex;
+    justify-content: flex-end;
+    padding: $side-padding;
+    border-radius: 16px;
+    background-color: rgba($color: #61dafb, $alpha: 0.3);
+
+    .container {
+      flex: 1;
+    }
+  }
+
+  .logs {
+    grid-area: logs;
+    padding: $side-padding;
+    border-radius: 16px;
+    background-color: rgba($color: #61dafb, $alpha: 0.3);
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .Dashboard {
+    grid-template-areas:
+      'welcome'
+      'overview'
+      'history'
+      'logs';
+  }
+}
